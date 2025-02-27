@@ -1,8 +1,22 @@
-const App  = () => {
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Navbar from "./components/Navbar";
+import Home from "./pages/Home";
+import About from "./pages/About";
+import Projects from "./pages/Projects";
+import Contact from "./pages/Contact";
+
+function App() {
   return (
-    <div className="w-screen h-screen flex justify-center items-center">
-      <h1 className="font-bold text-2xl text-blue-500">React + Vite + Tailwindcss V 4.0.9</h1>
-    </div>
-  )
+    <Router>
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/projects" element={<Projects />} />
+        <Route path="/contact" element={<Contact />} />
+      </Routes>
+    </Router>
+  );
 }
-export default App
+
+export default App;
