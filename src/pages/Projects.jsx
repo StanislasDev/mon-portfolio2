@@ -5,17 +5,17 @@ const projects = [
     description: "Application de gestion des employers.",
     image: "/images/employer.png", // Mets l'image correspondante
     technologies: ["Bootstrap", "Laravel", "PHP", "MySQL"], // Liste des technologies
-    liveDemo: "https://monprojet.com", // Lien vers le projet en ligne
-    github: "https://github.com/monrepo", // Lien vers le code source
+    liveDemo: "{/* https://monprojet.com */}", // Lien vers le projet en ligne
+    // github: "https://github.com/monrepo", // Lien vers le code source
   },
   {
     id: 2,
     title: "Gestion de présence des enseignants",
     description: "Une solution complète pour gérer la présence des enseignants.",
-    image: "/images/presence.png",
+    image: "/projects/seance.png",
     technologies: ["Laravel", "PHP", "MySQL"],
-    liveDemo: "",
-    github: "https://github.com/monrepo",
+    liveDemo: "{/* https://monprojet.com */}",
+    // github: "https://github.com/monrepo",
   },
   {
     id: 3,
@@ -23,8 +23,8 @@ const projects = [
     description: "Un tableau de bord pour les adminitrateurs d'une application.",
     image: "/images/dashboard.png",
     technologies: ["HTML", "CSS", "JavaScript"],
-    liveDemo: "",
-    github: "",
+    liveDemo: "{/* https://monprojet.com */}",
+    // github: "",
   },
   {
     id: 4,
@@ -32,8 +32,8 @@ const projects = [
     description: "Page de connexion avec boutton surbrillant.",
     image: "/images/connexion.png",
     technologies: ["HTML", "CSS"],
-    liveDemo: "",
-    github: "",
+    liveDemo: "{/* https://monprojet.com */}",
+    // github: "",
   },
 ];
 
@@ -77,7 +77,7 @@ const Projects = () => {
                   href={project.github}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-blue-400 hover:underline"
+                  className="text-blue-400 hover:underline select-none"
                 >
                   Code source
                 </a>

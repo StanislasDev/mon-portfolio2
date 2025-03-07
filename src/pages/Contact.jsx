@@ -72,7 +72,6 @@ const Contact = () => {
           <a href="https://github.com/StanislasDev" className="text-gray-400 hover:text-white text-2xl"><i className="fab fa-github"></i></a>
           <a href="#" className="text-blue-500 hover:text-white text-2xl"><i className="fab fa-linkedin"></i></a>
           <a href="https://t.me/Stanislas_12" className="text-blue-500 hover:text-white text-2xl"><i className="fab fa-telegram"></i></a>
-          <a href="https://t.me/Stanislas_12" className="text-blue-500 hover:text-white text-2xl"><i className="fab fa-telegram"></i></a>
           <a href="https://www.facebook.com/share/1BWUsDQ7g" className="text-blue-700 hover:text-white text-2xl"><i className="fab fa-facebook"></i></a>
           <a href="https://wa.me/c/237658395783" className="text-green-500 hover:text-white text-2xl"><i className="fab fa-whatsapp"></i></a>
         </div>

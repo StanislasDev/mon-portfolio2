@@ -56,7 +56,7 @@ const Home = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
           {/* Projet 1 */}
           <div className="bg-gray-700 p-6 rounded-lg">
-            <img src="/project1.png" alt="Projet 1" className="rounded-lg mb-4" />
+            <img src="/projects/seance.png" alt="Projet 1" className="rounded-lg mb-4" />
             <h3 className="text-xl font-semibold">Gestion de présence des enseignants</h3>
             <p className="mt-2">Application Laravel permettant de suivre la présence des enseignants.</p>
             <a href="/projects" className="text-blue-400 mt-3 inline-block">
@@ -66,7 +66,7 @@ const Home = () => {
 
           {/* Projet 2 */}
           <div className="bg-gray-700 p-6 rounded-lg">
-            <img src="/project2.png" alt="Projet 2" className="rounded-lg mb-4" />
+            <img src="/projects/investment.png" alt="Projet 2" className="rounded-lg mb-4" />
             <h3 className="text-xl font-semibold">Plateforme d'investissement</h3>
             <p className="mt-2">Développement d'une plateforme d'investissement en ligne avec Laravel.</p>
             <a href="/projects" className="text-blue-400 mt-3 inline-block">
@@ -76,7 +76,7 @@ const Home = () => {
 
           {/* Projet 3 */}
           <div className="bg-gray-700 p-6 rounded-lg">
-            <img src="/project3.png" alt="Projet 3" className="rounded-lg mb-4" />
+            <img src="/projects/portfolio.png" alt="Projet 3" className="rounded-lg mb-4" />
             <h3 className="text-xl font-semibold">Portfolio en React</h3>
             <p className="mt-2">Création de mon propre portfolio en React.js et Tailwind CSS.</p>
             <a href="/projects" className="text-blue-400 mt-3 inline-block">
