@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 const Home = () => {
   return (
     <div className="bg-gray-900 text-white">
@@ -9,12 +10,12 @@ const Home = () => {
         Passionné par la création d’interfaces modernes et performantes.
         </p>
         <div className="flex space-x-4">
-          <a href="/projects" className="px-6 py-3 bg-blue-600 rounded-lg text-lg hover:bg-blue-500 transition">
+        <Link to="/projects" className="px-6 py-3 bg-blue-600 rounded-lg text-lg hover:bg-blue-500 transition">
             <i className="fas fa-laptop-code mr-2"></i> Voir mes projets
-          </a>
-          <a href="/contact" className="px-6 py-3 border border-white rounded-lg text-lg hover:bg-white hover:text-gray-900 transition">
+          </Link>
+          <Link to="/contact" className="px-6 py-3 border border-white rounded-lg text-lg hover:bg-white hover:text-gray-900 transition">
             <i className="fas fa-envelope mr-2"></i> Me contacter
-          </a>
+          </Link>
         </div>
         <img src="/profile.jpg" alt="Photo de profil" className="mt-10 w-40 h-40 rounded-full border-4 border-blue-500" />
       </section>
@@ -92,9 +93,9 @@ const Home = () => {
         <p className="text-lg max-w-3xl mx-auto mb-6">
           Vous avez un projet ou une opportunité ? Contactez-moi !
         </p>
-        <a href="/contact" className="px-6 py-3 bg-blue-600 rounded-lg text-lg hover:bg-blue-500 transition">
+        <Link to="/contact" className="px-6 py-3 bg-blue-600 rounded-lg text-lg hover:bg-blue-500 transition">
           <i className="fas fa-paper-plane mr-2"></i> Contactez-moi
-        </a>
+        </Link>
       </section>
     </div>
   );
