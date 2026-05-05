@@ -1,46 +1,51 @@
-import { useState } from "react";
-import { Link } from "react-router-dom";
-import { FaBars, FaTimes } from "react-icons/fa";
+﻿import { Link, NavLink } from 'react-router-dom';
+import ThemeToggle from './ThemeToggle';
 
-const Navbar = () => {
-  const [isOpen, setIsOpen] = useState(false);
-
-  const toggleMenu = () => {
-    setIsOpen(!isOpen);
-  };
-
-  return (
-    <nav className="bg-gray-900 text-white p-4">
-      <div className="container mx-auto flex justify-between items-center">
-        <h1 className="text-2xl font-bold">Mon Portfolio</h1>
-
-        {/* Icône pour afficher le menu en version mobile */}
-        <div className="md:hidden">
-          <button onClick={toggleMenu}>
-            {isOpen ? <FaTimes size={24} /> : <FaBars size={24} />}
-          </button>
-        </div>
-
-        {/* Liens de navigation en version desktop */}
-        <ul className="hidden md:flex space-x-6">
-          <li><Link to="/" className="hover:text-gray-400">Accueil</Link></li>
-          <li><Link to="/about" className="hover:text-gray-400">À propos</Link></li>
-          <li><Link to="/projects" className="hover:text-gray-400">Projets</Link></li>
-          <li><Link to="/contact" className="hover:text-gray-400">Contact</Link></li>
-        </ul>
+const Navbar = () => (
+  <header className="fixed top-0 left-0 right-0 z-50 bg-white/5 dark:bg-black/60 backdrop-blur-xl border-b border-white/5">
+    <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+      <Link to="/" className="text-xl font-bold tracking-tighter hover:text-cyan-400 transition-colors">
+        <img src="/logo.png" alt="StanisDev Logo" className="w-8 h-8 mr-2 inline-block" />
+        STANIS<span className="text-cyan-500">.</span>DEV
+      </Link>
+      <nav className="hidden md:flex items-center gap-8 text-[11px] uppercase tracking-[0.2em] font-medium">
+        <NavLink 
+          to="/about" 
+          className={({ isActive }) => 
+            `hover:text-cyan-400 transition-colors ${isActive ? 'text-cyan-400' : 'text-white/60'}`
+          }
+        >
+          À propos
+        </NavLink>
+        <NavLink 
+          to="/projects" 
+          className={({ isActive }) => 
+            `hover:text-cyan-400 transition-colors ${isActive ? 'text-cyan-400' : 'text-white/60'}`
+          }
+        >
+          Projets
+        </NavLink>
+        <NavLink 
+          to="/contact" 
+          className={({ isActive }) => 
+            `hover:text-cyan-400 transition-colors ${isActive ? 'text-cyan-400' : 'text-white/60'}`
+          }
+        >
+          Contact
+        </NavLink>
+      </nav>
+      <div className="flex items-center gap-4">
+        {/* Espace réservé pour les fonctionnalités futures telles que Language Switcher ou Theme Toggle */}
+        <ThemeToggle />
+        <Link 
+          to="/contact" 
+          className="bg-white text-black px-5 py-2 text-xs font-bold uppercase tracking-widest hover:bg-cyan-500 hover:text-white transition-all duration-300 rounded-full"
+        >
+          Contactez-moi
+        </Link>
       </div>
-
-      {/* Menu burger en version mobile */}
-      {isOpen && (
-        <ul className="md:hidden flex flex-col items-center space-y-6 mt-6">
-          <li><Link to="/" onClick={toggleMenu} className="hover:text-gray-400">Accueil</Link></li>
-          <li><Link to="/about" onClick={toggleMenu} className="hover:text-gray-400">À propos</Link></li>
-          <li><Link to="/projects" onClick={toggleMenu} className="hover:text-gray-400">Projets</Link></li>
-          <li><Link to="/contact" onClick={toggleMenu} className="hover:text-gray-400">Contact</Link></li>
-        </ul>
-      )}
-    </nav>
-  );
-};
+    </div>
+  </header>
+);
 
 export default Navbar;
