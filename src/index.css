@@ -6,12 +6,10 @@
     cursor: default;
   }
 
-  @import "tailwindcss";
+  /* Dark mode */
+  /* @custom-variant dark (&:where(.dark, .dark *)); */
 
-/* Dark mode basé sur la classe */
-@variant dark (&:where(.dark, .dark *));
-
-/* Tes animations custom */
+/* Tests animations custom */
 @theme {
   --animate-gradient: gradient 8s linear infinite;
   --animate-float: float 6s ease-in-out infinite;

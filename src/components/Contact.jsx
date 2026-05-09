@@ -1,4 +1,4 @@
-﻿import { useState, useRef } from 'react';
+﻿import { useState, useRef, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import emailjs from '@emailjs/browser';
 import { FaLinkedin, FaGithub, FaEnvelope, FaTelegram } from 'react-icons/fa';
@@ -8,12 +8,23 @@ const Contact = () => {
   const formRef = useRef();
   const [status, setStatus] = useState('');
 
+  // Le message statut disparait après 5 secondes
+  useEffect(() => {
+    if (status === 'success' || status === 'error') {
+      const timer = setTimeout(() => {
+        setStatus('');
+      }, 5000);
+
+      return () => clearTimeout(timer);
+    }
+  }, [status]);
+
   const sendEmail = (e) => {
     e.preventDefault();
     setStatus('sending');
 
-    // Note: L'utilisateur doit les remplacer par ses propres identifiants EmailJS
-    emailjs.sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', formRef.current, 'YOUR_PUBLIC_KEY')
+
+    emailjs.sendForm('portfolio_2025', 'template_rwqp0sv', formRef.current, 'dCpzOI6hgrpVuVstE')
       .then(() => {
         setStatus('success');
         e.target.reset();
@@ -70,7 +81,7 @@ const Contact = () => {
                 <div className="space-y-2">
                   <label className="text-[10px] uppercase tracking-widest font-bold text-white/40 ml-4">Nom Complet</label>
                   <input 
-                    type="text" name="user_name" required
+                    type="text" name="name" required
                     className="w-full px-6 py-4 rounded-2xl bg-white/5 border border-white/5 focus:border-cyan-500/50 outline-none transition-all placeholder:text-white/10"
                     placeholder="John Doe"
                   />
@@ -78,7 +89,7 @@ const Contact = () => {
                 <div className="space-y-2">
                   <label className="text-[10px] uppercase tracking-widest font-bold text-white/40 ml-4">Adresse Email</label>
                   <input 
-                    type="email" name="user_email" required
+                    type="email" name="email" required
                     className="w-full px-6 py-4 rounded-2xl bg-white/5 border border-white/5 focus:border-cyan-500/50 outline-none transition-all placeholder:text-white/10"
                     placeholder="john@example.com"
                   />
@@ -98,11 +109,11 @@ const Contact = () => {
                 disabled={status === 'sending'}
                 className="w-full py-5 rounded-2xl bg-white text-black font-black uppercase tracking-[0.2em] text-xs hover:bg-cyan-500 hover:text-white transition-all duration-300 disabled:opacity-50"
               >
-                {status === 'sending' ? 'Transmitting...' : 'Envoyez un message'}
+                {status === 'sending' ? 'Envoi en cours...' : 'Envoyez un message'}
               </button>
 
-              {status === 'success' && <p className="text-center text-cyan-400 text-xs font-bold uppercase tracking-widest mt-4">Message Sent Successfully!</p>}
-              {status === 'error' && <p className="text-center text-red-400 text-xs font-bold uppercase tracking-widest mt-4">Transmission Error. Try Again.</p>}
+              {status === 'success' && <p className="text-center text-cyan-400 text-xs font-bold uppercase tracking-widest mt-4">Message Envoyé avec Succès!</p>}
+              {status === 'error' && <p className="text-center text-red-400 text-xs font-bold uppercase tracking-widest mt-4">Erreur d'envoi. Merci de réessayer.</p>}
             </form>
           </motion.div>
         </div>
