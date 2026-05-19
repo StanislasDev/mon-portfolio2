@@ -20,17 +20,15 @@ export default function App() {
 
   return (
     <ThemeContext.Provider value={{ isDark, toggle }}>
-      <div className="bg-white dark:bg-gray-900 text-gray-900 dark:text-white transition-colors duration-300">
-        <Routes>
-      <Route path="/" element={<Layout />}>
-        <Route index element={<Home />} />
-        <Route path="about" element={<AboutPage />} />
-        <Route path="projects" element={<ProjectsPage />} />
-        <Route path="contact" element={<ContactPage />} />
-        <Route path="*" element={<NotFound />} />
-      </Route>
-    </Routes>
-      </div>
+      <Routes>
+        <Route path="/" element={<Layout />}>
+          <Route index element={<Home />} />
+          <Route path="about" element={<AboutPage />} />
+          <Route path="projects" element={<ProjectsPage />} />
+          <Route path="contact" element={<ContactPage />} />
+          <Route path="*" element={<NotFound />} />
+        </Route>
+      </Routes>
     </ThemeContext.Provider>
   )
 }

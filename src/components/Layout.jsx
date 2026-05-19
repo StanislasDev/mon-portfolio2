@@ -5,7 +5,7 @@ import AnimatedBackground from './AnimatedBackground';
 
 function Layout() {
   return (
-    <div className="bg-white dark:bg-black text-white min-h-screen relative overflow-x-hidden">
+    <div className="bg-white dark:bg-black text-slate-900 dark:text-white min-h-screen relative overflow-x-hidden transition-colors duration-300">
       <AnimatedBackground />
       <Navbar />
       <main className="relative z-10">
