@@ -12,15 +12,15 @@ const NotFound = () => {
         404
       </motion.h1>
       <div className="relative z-10">
-        <h2 className="text-4xl font-bold mb-4 tracking-tight">LOST IN SPACE?</h2>
-        <p className="text-white/40 mb-12 max-w-sm mx-auto font-medium">
-          The page you are looking for has been moved to another dimension or never existed.
+        <h2 className="text-4xl font-bold mb-4 tracking-tight">Perdu dans l&apos;espace?</h2>
+        <p className="text-slate-600 dark:text-white/40 mb-12 max-w-sm mx-auto font-medium">
+          La page que vous recherchez a été déplacée dans une autre dimension ou n&apos;a jamais exitée.
         </p>
         <Link 
           to="/" 
-          className="px-8 py-4 bg-white text-black font-bold uppercase tracking-widest text-xs rounded-full hover:bg-cyan-500 hover:text-white transition-all"
+          className="px-8 py-4 bg-black/30 dark:bg-white text-white/90 dark:text-black font-bold uppercase tracking-widest text-xs rounded-full hover:bg-cyan-500 hover:text-white transition-all"
         >
-          Return Home
+          Retour à l&apos;acceuil
         </Link>
       </div>
     </div>

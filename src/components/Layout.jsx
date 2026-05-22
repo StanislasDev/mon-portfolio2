@@ -1,7 +1,8 @@
 import { Outlet } from 'react-router-dom';
 import Navbar from './Navbar';
 import Footer from './Footer';
-import AnimatedBackground from './AnimatedBackground';
+import AnimatedBackground from './App/AnimatedBackground';
+import ScrollToTop from './App/ScrollToTop';
 
 function Layout() {
   return (
@@ -11,6 +12,7 @@ function Layout() {
       <main className="relative z-10">
         <Outlet />
       </main>
+      <ScrollToTop />
       <Footer />
     </div>
   );

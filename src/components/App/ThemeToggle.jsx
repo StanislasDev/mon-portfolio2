@@ -1,4 +1,4 @@
-import { useTheme } from "../App";
+import { useTheme } from "../../App";
 import { FaSun, FaMoon } from 'react-icons/fa';
 
 export default function ThemeToggle() {

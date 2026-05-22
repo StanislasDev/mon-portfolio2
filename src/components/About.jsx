@@ -25,30 +25,30 @@ const About = () => (
           {/* Experience Badge */}
           <div className="absolute -bottom-6 -right-6 bg-slate-900 dark:bg-white text-white dark:text-black p-8 rounded-[2rem] border border-slate-200 dark:border-white/10 shadow-2xl">
             <span className="block text-4xl font-black tracking-tighter">5+</span>
-            <span className="text-[10px] uppercase tracking-widest font-bold opacity-60">Years of<br />Experience</span>
+            <span className="text-[10px] uppercase tracking-widest font-bold opacity-60">Années <br />d&apos;Experience</span>
           </div>
         </motion.div>
 
         {/* Text Side */}
         <div>
-          <h2 className="text-[10px] uppercase tracking-[0.4em] text-cyan-500 font-bold mb-4">The Narrative</h2>
-          <h3 className="text-4xl md:text-5xl font-black tracking-tighter mb-8 leading-tight text-slate-900 dark:text-white">CRAFTING DIGITAL<br />SOLUTIONS WITH PURPOSE.</h3>
-          
+          <h2 className="text-[10px] uppercase tracking-[0.4em] text-cyan-500 font-bold mb-4">Le recit</h2>
+          <h3 className="text-4xl md:text-5xl font-black tracking-tighter mb-8 uppercase leading-tight text-slate-900 dark:text-white">Transformer des idées en applications fiables, intuitives<br /> et performantes.</h3>
+
           <div className="space-y-6 text-slate-600 dark:text-white/50 text-lg leading-relaxed mb-12">
             <p>
-              I am a Senior Full-Stack Engineer with a deep obsession for clean code, performance, and user-centric design. My journey began with a simple curiosity for how things work on the web, which evolved into a career building complex applications for global clients.
+              Je suis un développeur Full-Stack animé par une véritable passion pour le code épuré, les performances et la conception centrée sur l&apos;utilisateur. Tout a commencé par une passion toute simple pour l’informatique. J’ai choisi de m’intéresser au fonctionnement du web, ce qui a fini par devenir une carrière entièrement dédiée au développement d&apos;applications solides pour des clients internationaux.
             </p>
             <p>
-              I don&apos;t just write code; I architect systems that are scalable, maintainable, and delightful to use. My philosophy is simple: technology should be invisible, providing a seamless bridge between human needs and digital solutions.
+              Je ne me contente pas de rédiger du code ; je conçois des systèmes évolutifs, maintenables et agréables à utiliser. Ma philosophie est simple : innovation, qualité et performance, offrant un pont sans faille entre les besoins humains et les solutions digitales.
             </p>
           </div>
 
           <div className="grid grid-cols-2 gap-6">
             {[
-              { label: "Completed Projects", value: "40+" },
-              { label: "Happy Clients", value: "25+" },
-              { label: "Lines of Code", value: "1M+" },
-              { label: "Coffee Consumed", value: "∞" }
+              { label: "Projets réalisés", value: "25+" },
+              { label: "Clients satisfaits", value: "10+" },
+              { label: "Lignes de code", value: "1M+" },
+              { label: "Collaborations", value: "10" }
             ].map((stat, i) => (
               <div key={i} className="p-6 rounded-2xl bg-slate-100 dark:bg-white/5 border border-slate-200 dark:border-white/5 hover:border-cyan-500/20 dark:hover:border-white/10 transition-colors">
                 <span className="block text-2xl font-bold text-slate-900 dark:text-white mb-1">{stat.value}</span>

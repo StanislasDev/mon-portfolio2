@@ -1,5 +1,5 @@
 ﻿import { Link, NavLink } from 'react-router-dom';
-import ThemeToggle from './ThemeToggle';
+import ThemeToggle from './App/ThemeToggle';
 
 const Navbar = () => (
   <header className="fixed top-0 left-0 right-0 z-50 glass backdrop-blur-xl border-b border-slate-200 dark:border-white/5 transition-colors duration-300">
